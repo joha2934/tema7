@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        window.addEventListener("load", udregning);
+    let timer = 0.5;
+    let resultat = timer * 109;
+
+
+    function udregning() {
+        console.log("hent udregning");
+
+        if (resultat <100){
+        console.log("Tæt på Thunberg");
+        }
+        else if (resultat<100||200>resultat) {
+          console.log("Ja ja, du behøver ikke at melde dig ud af Å!");
+        }else if (resultat<200||600>resultat) {
+          console.log("Det er godt for turismen i nordeuropa");
+        }else if (resultat>=600) {
+          console.log("Nå ja, vi kan jo altid kolonisere en anden planet..");
+        }
+
+        }
+
+    </script>
+</body>
+</html>
