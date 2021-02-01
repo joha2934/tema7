@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+   <input type="text" id="længde">
+   <input type="text" id="bredde">
+    <input type="button" id="minKnap">
+
+    <script>
+        window.addEventListener("load", loadSide);
+
+
+    function loadSide() {
+        console.log("siden er loadet");
+       minKnap.addEventListener("click", knap);
+    }
+
+        function knap(){
+        let længde = document.querySelector("#længde").value;
+        let bredde = document.querySelector("#bredde").value;
+            let a = areal(længde,bredde);
+            let resultat;
+
+            if (isNaN(a)){
+                resultat ="Det er ikke et tal, prøv igen.";
+            } else if (a<=0) {
+                resultat = "Arealet er mindre end nul! Prøv igen."
+            } else {
+                resultat = `Arealet er ${a}`;
+            }
+       // let areal = længde * bredde;
+
+            console.log(resultat);
+ }
+        function areal(l,b) {
+            return l * b;
+        }
+
+    </script>
+</body>
+</html>
