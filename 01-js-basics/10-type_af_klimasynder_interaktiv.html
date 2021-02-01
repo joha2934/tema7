@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+   <input type="text" id="længde" title="Længde af timer">
+    <input type="button" id="minKnap">
+
+    <script>
+        window.addEventListener("load", loadSide);
+
+
+    function loadSide() {
+        console.log("siden er loadet");
+       minKnap.addEventListener("click", knap);
+    }
+
+        function knap(){
+        let længde = document.querySelector("#længde").value;
+            let regn = 109;
+            let c = co2(længde,regn);
+            let resultat;
+
+            if (isNaN(c)){
+                resultat ="Det er ikke et tal, prøv igen.";
+            } else if (c<=0) {
+                resultat = "Udledningen er mindre end nul, prøv igen."
+            } else {
+                resultat = `Co2 udledningen er ${c}`;
+            }
+       // let areal = længde * bredde;
+
+            console.log(resultat);
+ }
+        function co2(l,r) {
+            return l * r;
+        }
+
+    </script>
+</body>
+</html>
