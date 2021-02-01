@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+
+    <script>
+        let tid =new Date().getHours();
+        window.addEventListener("load", loadSide);
+
+        function loadSide() {
+            console.log("loadet")
+            if(tid<05||10>tid){
+            console.log("Godmorgen");
+        }
+       else if(tid<10||18>tid){
+            console.log("Goddag");
+        }
+            else if(tid<18||24>tid){
+            console.log("Godaften");
+        }
+             else if(tid<24||05>tid){
+            console.log("Godnat");
+        }
+        }
+
+    </script>
+</body>
+</html>
