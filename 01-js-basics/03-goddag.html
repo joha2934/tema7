@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+   <input type="text" id="name">
+    <input type="button" id="minKnap">
+
+    <script>
+        let name = document.querySelector("#name").value;
+        window.addEventListener("load", loadSide);
+
+    function loadSide() {
+        console.log("siden er loadet");
+       minKnap.addEventListener("click", knap);
+    }
+
+        function knap(){
+            console.log("Goddag " + name);
+ }
+
+    </script>
+</body>
+</html>
