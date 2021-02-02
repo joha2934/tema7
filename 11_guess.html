@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+<p>Gæt et tal mellem 0-20</p>
+   <input type="text" id="tallet">
+    <input type="button" id="minKnap">
+
+    <script>
+        let rand = Math.round(Math.random()*20);
+
+
+       minKnap.addEventListener("click", trykKnap);
+
+
+        function trykKnap() {
+            let tal = document.querySelector("#tallet").value;
+            console.log("tilfældigt", rand);
+            console.log("gæt", tal);
+
+            if (tal == rand) {
+                console.log("Juuhu, du fandt det rigtige tal");
+            }
+            else if (tal > rand){
+                console.log("Dit gættede tal er for højt");
+            }
+            else if (tal < rand) {
+                console.log("Dit gættede tal er for lavt.");
+            }
+        }
+
+    </script>
+</body>
+</html>
