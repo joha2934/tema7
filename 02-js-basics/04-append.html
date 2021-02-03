@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="02-style.css">
+</head>
+
+<body>
+   <header>
+       <h1>Titel</h1>
+   </header>
+   <main>
+      <h2>Undertitelt</h2>
+       <section>
+
+           <article>
+           <img src="https://placeimg.com/640/480/any">
+           <h3>Article 1</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est inventore, dignissimos neque ad libero nobis, in corporis delectus iusto quia quae assumenda quasi, voluptates accusamus, sapiente laboriosam rem deleniti! Ullam.</p>
+           </article>
+           <article>
+           <img src="https://placeimg.com/640/480/any">
+           <h3>Article 2</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est inventore, dignissimos neque ad libero nobis, in corporis delectus iusto quia quae assumenda quasi, voluptates accusamus, sapiente laboriosam rem deleniti! Ullam.</p></article>
+       </section>
+   </main>
+
+   <footer><p>This is a footer</p></footer>
+
+    <script>
+
+      /* const pic1 = document.querySelector("article:first-child img");
+        pic1.src = "hjerteform.jpg";
+        console.log("hjerteform");
+        pic1.alt = "hjerteform";
+
+
+
+    const overskrift = document.querySelector("h1");
+        overskrift.textContent = "Billedegalleri";
+        console.log(overskrift.textContent);
+
+
+        const underoverskrift = document.querySelector("h2");
+        underoverskrift.textContent = "Flotte billeder";
+        console.log(underoverskrift.textContent);
+
+        const article1H3 = document.querySelector("article:first-child h3");
+        article1H3.textContent = "hejhej";
+        console.log(article1H3.textContent);
+
+        const article1P = document.querySelector("article:first-child p");
+        article1P.textContent = "jeg kan godt lide vandmelon";
+        console.log(article1P.textContent);
+
+        const article2 = document.querySelector("article:nth-child(2)");
+        article2.innerHTML = "<img src=https://placeimg.com/640/480/any alt=hej> <h3>Hallooooo</h3> <p>Jeg kan også godt lide <b>æbler</b></p>";
+        console.log(article2.innerHTML);
+        const pic2 = document.querySelector("article:nth-child(2) img");
+        pic2.src = "vandflaske.png";
+        pic2.alt = "vandflaske";
+        console.log("vand"); */
+
+
+        let mainSection = document.querySelector("section");
+        //ny article
+        let newArticle = document.createElement("article");
+        //ny overskrift
+        let overskrift = document.createElement("h3");
+
+        let overskriftText = document.createTextNode("Article 3");
+
+        let newP = document.createElement("p");
+        newP.textContent = "jeg kan godt lide vandmelon!";
+
+        //ny billede
+        let newImg = document.createElement("img");
+        newImg.src="vandflaske.png";
+
+
+        mainSection.appendChild(newArticle);
+        overskrift.appendChild(overskriftText);
+        newArticle.appendChild(newImg);
+        newArticle.appendChild(overskrift);
+        newArticle.appendChild(newP);
+
+
+
+       /* const footer = document.querySelector("footer");
+        footer.innerHTML;
+        console.log(article2.footer);*/
+
+
+    </script>
+</body>
+</html>
