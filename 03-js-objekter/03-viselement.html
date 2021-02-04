@@ -8,13 +8,16 @@
 </head>
 
 <body>
+ <section>
+  <template>
    <article>
       <h3></h3>
        <img src="">
        <p></p>
        <p></p>
    </article>
-
+    </template>
+</section>
     <script>
         document.addEventListener("DOMContentLoaded", start);
 
@@ -25,7 +28,8 @@
         console.log(`navn:${dyr.navn},type:${dyr.type},levested:${dyr.levested},billede:${dyr.billede}`);
 
             //indhold skal placeres i article
-            const destination = document.querySelector("article");
+            const container = document.querySelector("section");
+            const template = document.querySelector("template");
 
 
             //kalder indhold

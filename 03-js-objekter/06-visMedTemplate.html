@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style> article {border: 1px solid black;}</style>
+</head>
+
+<body>
+  <section>
+  <template>
+   <article>
+<h3></h3>
+       <img src="">
+       <p></p>
+       <p></p>
+
+   </article>
+    </template>
+</section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        let dyr =[
+        {"navn":"gris","type":"pattedyr", "billede":"http://mabe-kea.dk/E19/pics/pig.png", "levested":"svinefarm"},
+
+        {"navn":"frø","type":"Amfibie", "billede":"http://mabe-kea.dk/E19/pics/frog.png", "levested":"Mose"},
+
+        {"navn":"Ræv","type":"pattedyr", "billede":"http://mabe-kea.dk/E19/pics/fox.png", "levested":"Skoven"},
+
+        {"navn":"Sild","type":"Fisk", "billede":"http://mabe-kea.dk/E19/pics/sild.jpg", "levested":"Havet"},
+
+        {"navn":"Krokodille","type":"Krybdyr", "billede":"http://mabe-kea.dk/E19/pics/kroko.jpg", "levested":"Sump"} ];
+
+        function start() {
+            console.log("DOM er loadet");
+
+//indhold skal placeres i section
+            const container = document.querySelector("section");
+            const template = document.querySelector("template");
+
+            dyr.forEach(dyr =>
+            { let klon = template.cloneNode(true).content;
+                klon.querySelector("h3").textContent = dyr.navn;
+            klon.querySelector("img").src = dyr.billede;
+            klon.querySelector("p:first-of-type").textContent = dyr.type;
+            klon.querySelector("p:nth-of-type(2)").textContent = dyr.levested;
+            container.appendChild(klon);
+            });
+
+              console.log(dyr);
+
+
+
+
+
+
+            /*//indhold skal placeres i article
+            const destination = document.querySelector("article");
+
+            //variabel for alt tekst
+            const tekst = `${dyr.navn}, ${dyr.type}, ${dyr.levested}`;
+
+            //kalder indhold
+            destination.querySelector("p").textContent = tekst;
+            destination.querySelector("img").src = dyr.billede; */
+
+        }
+    </script>
+</body>
+</html>
