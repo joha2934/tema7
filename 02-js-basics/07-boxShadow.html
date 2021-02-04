@@ -31,7 +31,13 @@
 
     <script>
 
-      /* const pic1 = document.querySelector("article:first-child img");
+        //shadow
+        const articleShadow = document.querySelector("article");
+        articleShadow.classList.add("shadow");
+
+
+
+      const pic1 = document.querySelector("article:first-child img");
         pic1.src = "hjerteform.jpg";
         console.log("hjerteform");
         pic1.alt = "hjerteform";
@@ -61,14 +67,24 @@
         const pic2 = document.querySelector("article:nth-child(2) img");
         pic2.src = "vandflaske.png";
         pic2.alt = "vandflaske";
-        console.log("vand"); */
+        console.log("vand");
 
         document.addEventListener("DOMContentLoaded", start);
 
+
+        //klik på første billede
+        document.querySelector("article:first-child img").addEventListener("click", skiftBillede)
+
+        //udskift billede
+        function skiftBillede() {
+             pic1.src = "vandflaske.png";
+        console.log("hjerteform");
+        pic1.alt = "vandflaske";
+        }
+
+
         function start() {
             console.log("DOM er loadet")
-
-
 
         let mainSection = document.querySelector("section");
         //ny article
@@ -93,6 +109,7 @@
         newArticle.appendChild(newP);
 
         }
+
 
 
 
