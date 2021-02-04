@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+   <article>
+
+
+   </article>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        let dyr =[
+        {"navn":"gris","type":"pattedyr", "levested":"svinefarm"},
+
+        {"navn":"frø","type":"Amfibie", "levested":"Mose"},
+
+        {"navn":"Ræv","type":"pattedyr", "levested":"Skoven"},
+
+        {"navn":"Sild","type":"Fisk", "levested":"Havet"},
+
+        {"navn":"Krokodille","type":"Krybdyr", "levested":"Sump"} ];
+
+        function start() {
+            console.log("DOM er loadet");
+const listevisning = document.querySelector("article");
+
+            dyr.forEach(dyr => { listevisning.innerHTML += `<p>${dyr.navn} ${dyr.type} ${dyr.levested} </p>`});
+
+
+    console.log(dyr);
+
+
+
+
+
+
+            /*//indhold skal placeres i article
+            const destination = document.querySelector("article");
+
+            //variabel for alt tekst
+            const tekst = `${dyr.navn}, ${dyr.type}, ${dyr.levested}`;
+
+            //kalder indhold
+            destination.querySelector("p").textContent = tekst;
+            destination.querySelector("img").src = dyr.billede; */
+
+        }
+    </script>
+</body>
+</html>
