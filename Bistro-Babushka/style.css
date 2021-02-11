@@ -1,0 +1,130 @@
+ * {
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        header {
+            background-image: url(splash.jpg);
+            height: 25vw;
+           background-size: cover;
+            position: relative;
+        }
+
+header nav {}
+
+        h1 {
+            text-align: center;
+            font-family: 'Patrick Hand', cursive;
+            letter-spacing: 0.1rem;
+            font-size: 6vw;
+            position: relative;
+            top: 7vw;
+            color: white;
+            text-shadow: 1px 1px 5px #00000057;
+        }
+
+
+        section {
+            max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        }
+
+        #liste {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-gap: 20px;
+            grid-row-gap: 30px;
+        }
+
+        article:hover {
+            box-shadow: 1px 1px 5px grey;
+            transition: all 0.5s ease-in-out;
+            opacity: 0.9;
+
+        }
+
+        article h2 {
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+            font-size: 1.7rem;
+            letter-spacing: 0.1rem;
+            font-family: 'Patrick Hand', cursive;
+        }
+
+        article h2:before {
+            content: "";
+            width: 75px;
+            height: 3px;
+            background-color: orange;
+            position: absolute;
+            left: 35%;
+            bottom: 0;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            background-color: #312c28;
+            color: white;
+            position: relative;
+        }
+
+        .tekst {
+            padding: 20px;
+        }
+
+        p {
+            margin-top: 1rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .pil {
+            width: 2rem;
+            height: auto;
+            margin: 0 auto;
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+        }
+
+        #section_one {
+                background-image: url(papir_bg.png);
+            background-size: cover;
+            height: 25%;
+            max-width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        #section_two nav button.valgt {
+            background-color: black;
+        }
+
+        #section_two nav {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #section_two nav button {
+            margin-left: 10px;
+                border: none;
+            background-color: #312c28;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem
+        }
+        #section_two nav button:first-child {
+            margin-left: 0;
+        }
+
+        main {
+            background-image: url(bg-paper.jpg);
+        }
